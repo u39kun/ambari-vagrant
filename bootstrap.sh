@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+sed -i 's/127\.0\.0\.1.*/127\.0\.0\.1   localhost localhost.localdomain localhost4 localhost4.localdomain4/g' /etc/hosts
 echo '192.168.56.101 dev01.ambari.apache.org dev01' >> /etc/hosts
 echo '192.168.56.102 dev02.ambari.apache.org dev02' >> /etc/hosts
 echo '192.168.56.103 dev03.ambari.apache.org dev03' >> /etc/hosts
