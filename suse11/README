@@ -1,0 +1,6 @@
+#SUSE has some quirks. For mac the following has been tested. You need to do this before running a suse instance.
+#NOTE: You only need to do this once. Once the patch is applied to Vagrant you no longer need to do the following steps
+
+sudo bash 
+cd /Applications/Vagrant/embedded/gems/gems/vagrant-1.2.7
+patch -p0 <vagrant-utils-dir>/suse11/suse.patch

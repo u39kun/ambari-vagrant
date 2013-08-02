@@ -1,0 +1,12 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.168.11.101 suse1101.ambari.apache.org suse1101
+192.168.11.102 suse1102.ambari.apache.org suse1102
+192.168.11.103 suse1103.ambari.apache.org suse1103
+192.168.11.104 suse1104.ambari.apache.org suse1104
+192.168.11.105 suse1105.ambari.apache.org suse1105
+192.168.11.106 suse1106.ambari.apache.org suse1106
+192.168.11.107 suse1107.ambari.apache.org suse1107
+192.168.11.108 suse1108.ambari.apache.org suse1108
+192.168.11.109 suse1109.ambari.apache.org suse1109
+192.168.11.110 suse1110.ambari.apache.org suse1110

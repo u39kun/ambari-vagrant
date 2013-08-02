@@ -1,0 +1,9 @@
+[opensuse]
+name=OpenSuse
+enabled=1
+gpgcheck=0
+autorefresh=1
+baseurl=http://download.opensuse.org/distribution/11.1/repo/oss/
+path=/
+type=yast2
+keeppackages=0
