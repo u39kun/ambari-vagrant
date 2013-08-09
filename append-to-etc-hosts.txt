@@ -31,7 +31,7 @@
 192.168.64.108 c6408.ambari.apache.org c6408
 192.168.64.109 c6409.ambari.apache.org c6409
 192.168.64.110 c6410.ambari.apache.org c6410
-
+# suse 11 hosts
 192.168.11.101 suse1101.ambari.apache.org suse1101
 192.168.11.102 suse1102.ambari.apache.org suse1102
 192.168.11.103 suse1103.ambari.apache.org suse1103
