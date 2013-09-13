@@ -38,40 +38,40 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     c6403.vm.network :private_network, ip: "192.168.64.103"
   end
 
-  config.vm.define :c6404 do |c6404|
-    c6404.vm.hostname = "c6404.ambari.apache.org"
-    c6404.vm.network :private_network, ip: "192.168.64.104"
-  end
-
-  config.vm.define :c6405 do |c6405|
-    c6405.vm.hostname = "c6405.ambari.apache.org"
-    c6405.vm.network :private_network, ip: "192.168.64.105"
-  end
-
-  config.vm.define :c6406 do |c6406|
-    c6406.vm.hostname = "c6406.ambari.apache.org"
-    c6406.vm.network :private_network, ip: "192.168.64.106"
-  end
-
-  config.vm.define :c6407 do |c6407|
-    c6407.vm.hostname = "c6407.ambari.apache.org"
-    c6407.vm.network :private_network, ip: "192.168.64.107"
-  end
-
-  config.vm.define :c6408 do |c6408|
-    c6408.vm.hostname = "c6408.ambari.apache.org"
-    c6408.vm.network :private_network, ip: "192.168.64.108"
-  end
-
-  config.vm.define :c6409 do |c6409|
-    c6409.vm.hostname = "c6409.ambari.apache.org"
-    c6409.vm.network :private_network, ip: "192.168.64.109"
-  end
-
-  config.vm.define :c6410 do |c6410|
-    c6410.vm.hostname = "c6410.ambari.apache.org"
-    c6410.vm.network :private_network, ip: "192.168.64.110"
-  end
+#  config.vm.define :c6404 do |c6404|
+#    c6404.vm.hostname = "c6404.ambari.apache.org"
+#    c6404.vm.network :private_network, ip: "192.168.64.104"
+#  end
+#
+#  config.vm.define :c6405 do |c6405|
+#    c6405.vm.hostname = "c6405.ambari.apache.org"
+#    c6405.vm.network :private_network, ip: "192.168.64.105"
+#  end
+#
+#  config.vm.define :c6406 do |c6406|
+#    c6406.vm.hostname = "c6406.ambari.apache.org"
+#    c6406.vm.network :private_network, ip: "192.168.64.106"
+#  end
+#
+#  config.vm.define :c6407 do |c6407|
+#    c6407.vm.hostname = "c6407.ambari.apache.org"
+#    c6407.vm.network :private_network, ip: "192.168.64.107"
+#  end
+#
+#  config.vm.define :c6408 do |c6408|
+#    c6408.vm.hostname = "c6408.ambari.apache.org"
+#    c6408.vm.network :private_network, ip: "192.168.64.108"
+#  end
+#
+#  config.vm.define :c6409 do |c6409|
+#    c6409.vm.hostname = "c6409.ambari.apache.org"
+#    c6409.vm.network :private_network, ip: "192.168.64.109"
+#  end
+#
+#  config.vm.define :c6410 do |c6410|
+#    c6410.vm.hostname = "c6410.ambari.apache.org"
+#    c6410.vm.network :private_network, ip: "192.168.64.110"
+#  end
 
 
 
