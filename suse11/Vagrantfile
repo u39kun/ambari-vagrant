@@ -12,7 +12,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
 
-  # CentOS 5.8 x86_64 minimal + guest additions, puppet, chef  
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/sles-11sp1-x64-vbox4210-nocm.box"
 
   config.vm.provider :virtualbox do |vb|
@@ -22,6 +21,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :path => "bootstrap.sh"
 
   config.vm.define :suse1101 do |suse1101|
+    # uncomment the line below to set up the ambari dev environment
+    # suse1101.vm.provision :shell, :path => "dev-bootstrap.sh"
     suse1101.vm.hostname = "suse1101.ambari.apache.org"
     suse1101.vm.network :private_network, ip: "192.168.11.101"
   end
