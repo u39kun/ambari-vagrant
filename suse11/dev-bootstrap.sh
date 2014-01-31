@@ -40,5 +40,5 @@ make
 make install
 cd -
 
-echo "export PATH=$PATH:/usr/share/maven/bin" >/etc/profile.local
+echo "export PATH=$PATH:/usr/share/maven/bin:/usr/local/bin" >/etc/profile.local
 source /etc/profile.local
