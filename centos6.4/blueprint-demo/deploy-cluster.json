@@ -1,5 +1,5 @@
 {
-  "blueprint": "launchpad-blueprint",
+  "blueprint": "myblueprint",
   "default_password": "admin",
   "host_groups": [
     {
