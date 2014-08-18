@@ -1,3 +1,9 @@
+Cluster Deployment using Blueprint API (Demo)
+----
+The scripts contained in this folder demonstrates how to deploy a cluster using Ambari Blueprint API.
+
+Instructions
+----
 Start with 4 barebone CentOS 6.4 VMs.
 
 Install and configure Ambari Agent on all hosts:
