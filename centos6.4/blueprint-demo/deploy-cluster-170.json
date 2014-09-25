@@ -18,6 +18,9 @@
         },
         {
           "fqdn": "c6403.ambari.apache.org"
+        },
+        {
+          "fqdn": "c6404.ambari.apache.org"
         }
       ]
     }
