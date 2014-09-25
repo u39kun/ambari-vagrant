@@ -22,18 +22,26 @@ List all Blueprints (none should exist):
 
     sh list-blueprints.sh
 
-Create Blueprint:
+Create Blueprint (Ambari 1.6.1 and earlier):
 
     sh create-blueprint.sh
+
+Create Blueprint (Ambari 1.7.0):
+
+    sh create-blueprint-170.sh
 
 List all Blueprints (one just reated should exist):
 
     sh list-blueprints.sh
 
-Deploy cluster using Blueprint:
+Deploy cluster using Blueprint (Ambari 1.6.1 and earlier):
 
     sh deploy-cluster.sh
-    
+
+Deploy cluster using Blueprint (Ambari 1.7.0):
+
+    sh deploy-cluster-170.sh
+
 Check deployment status:
 
     sh check-deploy-status.sh
