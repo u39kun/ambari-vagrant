@@ -8,9 +8,9 @@ service ntpd start
 # install tools necessary to build Ambari
 yum install git -y
 yum install rpm-build -y
-wget http://nodejs.org/dist/v0.10.15/node-v0.10.15-linux-x64.tar.gz
-tar zxvf node-v0.10.15-linux-x64.tar.gz
-mv node-v0.10.15-linux-x64 /usr/share/node
+wget http://nodejs.org/dist/v0.10.31/node-v0.10.31-linux-x64.tar.gz
+tar zxvf node-v0.10.31-linux-x64.tar.gz
+mv node-v0.10.31-linux-x64 /usr/share/node
 /usr/share/node/bin/npm install -g brunch
 wget --no-check-certificate http://pypi.python.org/packages/2.6/s/setuptools/setuptools-0.6c11-py2.6.egg
 sh setuptools-0.6c11-py2.6.egg
