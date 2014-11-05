@@ -21,3 +21,6 @@ sudo -u root zypper clean
 sudo -u root /usr/bin/zypper --non-interactive --quiet install --auto-agree-with-licenses  python-rrdtool-1.4.5
 sudo -u root rm /etc/zypp/repos.d/HDP-UTILS.repo -f
 sudo -u root zypper clean
+
+sudo cp /vagrant/insecure_private_key /root/ec2-keypair
+sudo chmod 600 /root/ec2-keypair

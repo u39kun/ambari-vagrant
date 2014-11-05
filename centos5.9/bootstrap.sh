@@ -13,3 +13,5 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 echo "/swapfile       none    swap    sw      0       0" >> /etc/fstab
 
+sudo cp /vagrant/insecure_private_key /root/ec2-keypair
+sudo chmod 600 /root/ec2-keypair
