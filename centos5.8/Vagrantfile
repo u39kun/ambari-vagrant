@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "http://tag1consulting.com/files/centos-5.8-x86-64-minimal.box"
 
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", 2048] # RAM allocated to each VM
+    vb.customize ["modifyvm", :id, "--memory", 3072] # RAM allocated to each VM
   end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
