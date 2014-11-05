@@ -8,4 +8,5 @@ mkdir -p /root/.ssh; chmod 600 /root/.ssh; cp /home/vagrant/.ssh/authorized_keys
 sudo dd if=/dev/zero of=/swapfile bs=1024 count=3072k
 sudo mkswap /swapfile
 sudo swapon /swapfile
-echo "/swapfile       none    swap    sw      0       0" >> /etc/fstab
+sudo echo "/swapfile       none    swap    sw      0       0" >> /etc/fstab
+sudo ufw disable
