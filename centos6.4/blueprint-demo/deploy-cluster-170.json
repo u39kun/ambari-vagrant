@@ -1,0 +1,28 @@
+{
+  "blueprint": "myblueprint",
+  "default_password": "adminpw",
+  "host_groups": [
+    {
+      "name": "master",
+      "hosts": [
+        {
+          "fqdn": "c6401.ambari.apache.org"
+        }
+      ]
+    },
+    {
+      "name": "workers",
+      "hosts": [
+        {
+          "fqdn": "c6402.ambari.apache.org"
+        },
+        {
+          "fqdn": "c6403.ambari.apache.org"
+        },
+        {
+          "fqdn": "c6404.ambari.apache.org"
+        }
+      ]
+    }
+  ]
+}
