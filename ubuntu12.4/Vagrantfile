@@ -22,6 +22,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :path => "bootstrap.sh"
 
   config.vm.define :u1201 do |u1201|
+    # uncomment the line below to set up the ambari dev environment
+    #u1201.vm.provision :shell, :path => "dev-bootstrap.sh"
     u1201.vm.hostname = "u1201.ambari.apache.org"
     u1201.vm.network :private_network, ip: "192.168.12.101"
   end
