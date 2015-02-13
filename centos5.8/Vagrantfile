@@ -24,9 +24,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :shell, :path => "bootstrap.sh"
 
-  # use insecure_private_key
-  config.ssh.insert_key = false
-
   config.vm.define :c5801 do |c5801|
     c5801.vm.hostname = "c5801.ambari.apache.org"
     c5801.vm.network :private_network, ip: "192.168.58.101"

@@ -23,9 +23,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :shell, :path => "bootstrap.sh"
 
-  # use insecure_private_key
-  config.ssh.insert_key = false
-
   config.vm.define :suse1101 do |suse1101|
     # uncomment the line below to set up the ambari dev environment
     # suse1101.vm.provision :shell, :path => "dev-bootstrap.sh"
