@@ -9,13 +9,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "suse11"
 
+  # Fixes changes from https://github.com/mitchellh/vagrant/pull/4707
+  config.ssh.insert_key = false
+
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
 
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/sles-11sp1-x64-vbox4210-nocm.box"
 
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", 2048] # RAM allocated to each VM
+    vb.customize ["modifyvm", :id, "--memory", 3072] # RAM allocated to each VM
   end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
