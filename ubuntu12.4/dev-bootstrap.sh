@@ -16,7 +16,7 @@ mv node-v0.10.31-linux-x64 /usr/share/node
 /usr/share/node/bin/npm install -g brunch
 #wget --no-check-certificate http://pypi.python.org/packages/2.6/s/setuptools/setuptools-0.6c11-py2.6.egg
 #sh setuptools-0.6c11-py2.6.egg
-wget http://www.bizdirusa.com/mirrors/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz 
+wget http://psg.mtu.edu/pub/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
 tar zxvf apache-maven-3.0.5-bin.tar.gz
 mv apache-maven-3.0.5 /usr/share/maven
 apt-get install openjdk-6-jdk -y

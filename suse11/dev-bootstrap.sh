@@ -8,7 +8,7 @@ zypper --non-interactive in gcc-c++
 zypper --non-interactive in rpmrebuild
 zypper --non-interactive in java-1_6_0-openjdk-devel
 
-wget http://www.bizdirusa.com/mirrors/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
+wget http://psg.mtu.edu/pub/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
 tar zxvf apache-maven-3.0.5-bin.tar.gz
 mv apache-maven-3.0.5 /usr/share/maven
 
