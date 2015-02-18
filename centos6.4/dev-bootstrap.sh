@@ -8,6 +8,7 @@ service ntpd start
 # install tools necessary to build Ambari
 yum install git -y
 yum install rpm-build -y
+yum install gcc-c++ -y
 wget http://nodejs.org/dist/v0.10.31/node-v0.10.31-linux-x64.tar.gz
 tar zxvf node-v0.10.31-linux-x64.tar.gz
 mv node-v0.10.31-linux-x64 /usr/share/node
