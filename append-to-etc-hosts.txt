@@ -64,6 +64,17 @@
 192.168.12.108 u1208.ambari.apache.org u1208
 192.168.12.109 u1209.ambari.apache.org u1209
 192.168.12.110 u1210.ambari.apache.org u1210
+# ubuntu 14.4 hosts
+192.168.14.101 u1401.ambari.apache.org u1401
+192.168.14.102 u1402.ambari.apache.org u1402
+192.168.14.103 u1403.ambari.apache.org u1403
+192.168.14.104 u1404.ambari.apache.org u1404
+192.168.14.105 u1405.ambari.apache.org u1405
+192.168.14.106 u1406.ambari.apache.org u1406
+192.168.14.107 u1407.ambari.apache.org u1407
+192.168.14.108 u1408.ambari.apache.org u1408
+192.168.14.109 u1409.ambari.apache.org u1409
+192.168.14.110 u1410.ambari.apache.org u1410
 # debian 7.6 hosts
 192.168.76.101 d7601.ambari.apache.org d7601
 192.168.76.102 d7602.ambari.apache.org d7602

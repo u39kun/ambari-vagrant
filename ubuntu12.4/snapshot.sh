@@ -30,9 +30,12 @@ set_vm_prefix(){
 	ubuntu12.4)
 		vm_prefix=u12
 	;;
-        debian7.6)
-                vm_prefix=d76
-        ;;
+	ubuntu14.4)
+		vm_prefix=u14
+	;;
+	debian7.6)
+		vm_prefix=d76
+	;;
 	*)
 		echo "Unrecognized working folder! $0 needs to be placed into on of the following: "
 		echo "centos 6.5 centos6.4 centos5.8. centos5.9 suse11 ubuntu12.4"
