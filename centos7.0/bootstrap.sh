@@ -18,3 +18,6 @@ echo "/swapfile       none    swap    sw      0       0" >> /etc/fstab
 
 sudo cp /vagrant/insecure_private_key /root/ec2-keypair
 sudo chmod 600 /root/ec2-keypair
+
+# Workaround from https://www.digitalocean.com/community/questions/can-t-install-mysql-on-centos-7
+rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
