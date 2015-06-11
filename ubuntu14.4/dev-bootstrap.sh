@@ -10,6 +10,7 @@ service ntp start
 apt-get install make -y
 apt-get install g++ -y
 apt-get install git -y
+apt-get install python-dev
 wget http://nodejs.org/dist/v0.10.31/node-v0.10.31-linux-x64.tar.gz
 tar zxvf node-v0.10.31-linux-x64.tar.gz
 mv node-v0.10.31-linux-x64 /usr/share/node
