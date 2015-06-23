@@ -10,7 +10,8 @@ service ntp start
 apt-get install make -y
 apt-get install g++ -y
 apt-get install git -y
-apt-get install python-dev
+apt-get install python-dev -y
+apt-get install python-setuptools -y
 apt-get install openjdk-7-jdk -y
 apt-get install maven -y
 apt-get install nodejs-legacy -y
