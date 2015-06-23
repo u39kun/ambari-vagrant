@@ -10,7 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
 
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", 2048] # RAM allocated to each VM
+    vb.memory = 3048
+    vb.cpus = 3
   end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
@@ -22,11 +23,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     u1401.vm.network :private_network, ip: "192.168.76.101"
 
     # Share package folders
-    u1401.vm.synced_folder "~/.m2/repository", "/home/vagrant/.m2/repository"
-    u1401.vm.synced_folder "~/.npm", "/home/vagrant/.npm"
+    u1401.vm.synced_folder "~/.m2/repository", "/home/vagrant/.m2/repository", type: "nfs"
+    u1401.vm.synced_folder "~/.npm", "/home/vagrant/.npm", type: "nfs"
 
     # Share source folder
-    u1401.vm.synced_folder "../../", "/ambari"
+    u1401.vm.synced_folder "../../", "/ambari", type: "nfs"
 
     # Forward ports for remote debugging/REPL
     u1401.vm.network :forwarded_port, host: 6000, guest: 6000
