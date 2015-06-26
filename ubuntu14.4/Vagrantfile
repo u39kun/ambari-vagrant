@@ -7,25 +7,31 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # All Vagrant configuration is done here. The most common configuration
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu14.4"
-
-  # The url from where the 'config.vm.box' box will be fetched if it
-  # doesn't already exist on the user's system.
-
-  # Ubuntu 14.04 x64 VM with VirtualBox 4.3.10 Guest Additions
-  config.vm.box_url = "https://github.com/hnakamur/packer-templates/releases/download/v1.0.2/ubuntu-14-04-x64-virtualbox.box"
+  config.vm.box = "ubuntu/trusty64"
 
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", 2048] # RAM allocated to each VM
+    vb.memory = 3048
+    vb.cpus = 3
   end
 
   config.vm.provision :shell, :path => "bootstrap.sh"
 
   config.vm.define :u1401 do |u1401|
     # uncomment the line below to set up the ambari dev environment
-    # u1401.vm.provision :shell, :path => "dev-bootstrap.sh"
+    u1401.vm.provision :shell, :path => "dev-bootstrap.sh"
     u1401.vm.hostname = "u1401.ambari.apache.org"
     u1401.vm.network :private_network, ip: "192.168.76.101"
+
+    # Share package folders
+    u1401.vm.synced_folder "~/.m2/repository", "/home/vagrant/.m2/repository", type: "nfs"
+    u1401.vm.synced_folder "~/.npm", "/home/vagrant/.npm", type: "nfs"
+
+    # Share source folder
+    u1401.vm.synced_folder "../../", "/ambari", type: "nfs"
+
+    # Forward ports for remote debugging/REPL
+    u1401.vm.network :forwarded_port, host: 6000, guest: 6000
+    u1401.vm.network :forwarded_port, host: 6001, guest: 6001
   end
 
   config.vm.define :u1402 do |u1402|
