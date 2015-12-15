@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
 
   # Ubuntu 14.04 x64 VM with VirtualBox 4.3.10 Guest Additions
-  config.vm.box_url = "https://github.com/hnakamur/packer-templates/releases/download/v1.0.2/ubuntu-14-04-x64-virtualbox.box"
+  config.vm.box_url = "http://naruh.sakura.ne.jp/vagrant/ubuntu-14-04-x64-virtualbox.box"
 
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", 2048] # RAM allocated to each VM
