@@ -300,15 +300,16 @@ take)
 delete)
 	echo "Command chosen: delete"
 	if [[ $2 == [0-9] && $3 == [0-9] && -n $4 ]]; then
-		#read -p "Snapshot deletion is extremely long and cannot be interupted. Are you sure[N/y]? " -n 1 -r
-		#echo    # (optional) move to a new line
-		#if [[ $REPLY =~ ^[Yy]$ ]]
-		#then
-		    run_all_vms $2 $3
-			controlvm $2 $3 pause
-			snapshot_delete $2 $3 $4
-			controlvm $2 $3 resume
-		#fi
+		read -p "All machines from this folder will be powered off. Are you sure[N/y]? " -n 1 -r
+		echo    # (optional) move to a new line
+		if [[ $REPLY =~ ^[Yy]$ ]]
+		then
+			controlvm $2 $3 poweroff
+			for snapshot_name in ${@:4}
+			do
+				snapshot_delete $2 $3 $snapshot_name
+			done
+		fi
 		
 	else
 		echo "Invalid arg vm numbers: expected [0-9] [0-9] <snapshot_name>, but was " $2 $3 $4
