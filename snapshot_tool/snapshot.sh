@@ -31,17 +31,17 @@ set_vm_prefix(){
 		vm_prefix=c58
 	;;
 	suse11)
-		vm_prefix=suse11	
+		vm_prefix=suse11
 	;;
 	ubuntu12.4)
 		vm_prefix=u12
 	;;
-        ubuntu14.4)
-                vm_prefix=u14
-        ;;
-        debian7.6)
-                vm_prefix=d76
-        ;;
+	ubuntu14.4)
+		vm_prefix=u14
+	;;
+	debian7.6)
+		vm_prefix=d76
+	;;
 	*)
 		echo "Unrecognized working folder!"
 		exit -1;
