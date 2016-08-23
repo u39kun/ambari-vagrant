@@ -53,8 +53,7 @@ set_vm_prefix(){
 #set alias for VBoxManage
 VBoxManageWrapper()
 {
-	if [ $(uname -o) == Msys ]
-	then
+	if is_windows; then
 		VBoxManage=VBoxManage.bat
 		params=$@
 		cmd /c "$VBoxManage $params"
@@ -228,10 +227,17 @@ do
 done	
 }
 
+is_windows() {
+	if [ "$(uname -s)" != "Darwin" ] && [ "$(uname -o)" == "Msys" ]; then
+		return 0
+	else
+		return 1
+	fi
+}
+
 sync_time()
 {
-if [ $(uname -o) == Msys ];
-then
+if is_windows; then
 	echo
 	echo "============================================================"
 	echo "Time sync is not avaliable on Windows hosts. "
