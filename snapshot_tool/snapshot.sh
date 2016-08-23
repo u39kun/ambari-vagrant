@@ -12,6 +12,12 @@
 set_vm_prefix(){
 	current_dir=$(basename "$PWD")
 	case $current_dir in
+	centos7.0)
+		vm_prefix=c70
+	;;
+	centos6.6)
+		vm_prefix=c66
+	;;
 	centos6.5)
 		vm_prefix=c65
 	;;
@@ -37,8 +43,7 @@ set_vm_prefix(){
                 vm_prefix=d76
         ;;
 	*)
-		echo "Unrecognized working folder! $0 needs to be placed into on of the following: "
-		echo "centos 6.5 centos6.4 centos5.8. centos5.9 suse11 ubuntu12.4"
+		echo "Unrecognized working folder!"
 		exit -1;
 	;;
 	esac
