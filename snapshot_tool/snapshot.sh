@@ -42,6 +42,9 @@ set_vm_prefix(){
 	debian7.6)
 		vm_prefix=d76
 	;;
+	debian8.6)
+		vm_prefix=d86
+	;;
 	*)
 		echo "Unrecognized working folder!"
 		exit -1;
