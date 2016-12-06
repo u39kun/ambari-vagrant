@@ -12,6 +12,12 @@
 set_vm_prefix(){
 	current_dir=$(basename "$PWD")
 	case $current_dir in
+	centos7.0)
+		vm_prefix=c70
+	;;
+	centos6.6)
+		vm_prefix=c66
+	;;
 	centos6.5)
 		vm_prefix=c65
 	;;
@@ -25,20 +31,19 @@ set_vm_prefix(){
 		vm_prefix=c58
 	;;
 	suse11)
-		vm_prefix=suse11	
+		vm_prefix=suse11
 	;;
 	ubuntu12.4)
 		vm_prefix=u12
 	;;
-        ubuntu14.4)
-                vm_prefix=u14
-        ;;
-        debian7.6)
-                vm_prefix=d76
-        ;;
+	ubuntu14.4)
+		vm_prefix=u14
+	;;
+	debian7.6)
+		vm_prefix=d76
+	;;
 	*)
-		echo "Unrecognized working folder! $0 needs to be placed into on of the following: "
-		echo "centos 6.5 centos6.4 centos5.8. centos5.9 suse11 ubuntu12.4"
+		echo "Unrecognized working folder!"
 		exit -1;
 	;;
 	esac
@@ -48,8 +53,7 @@ set_vm_prefix(){
 #set alias for VBoxManage
 VBoxManageWrapper()
 {
-	if [ $(uname -o) == Msys ]
-	then
+	if is_windows; then
 		VBoxManage=VBoxManage.bat
 		params=$@
 		cmd /c "$VBoxManage $params"
@@ -223,13 +227,20 @@ do
 done	
 }
 
+is_windows() {
+	if [ "$(uname -s)" != "Darwin" ] && [ "$(uname -o)" == "Msys" ]; then
+		return 0
+	else
+		return 1
+	fi
+}
+
 sync_time()
 {
-if [ $(uname -o) == Msys ];
-then
+if is_windows; then
 	echo
 	echo "============================================================"
-	echo "Time sync is not avaliable on Windows hosts. "
+	echo "Time sync is not available on Windows hosts. "
 	echo "PLEASE DO IT BY YOURSELF"
 	echo "============================================================"
 else
@@ -300,15 +311,16 @@ take)
 delete)
 	echo "Command chosen: delete"
 	if [[ $2 == [0-9] && $3 == [0-9] && -n $4 ]]; then
-		#read -p "Snapshot deletion is extremely long and cannot be interupted. Are you sure[N/y]? " -n 1 -r
-		#echo    # (optional) move to a new line
-		#if [[ $REPLY =~ ^[Yy]$ ]]
-		#then
-		    run_all_vms $2 $3
-			controlvm $2 $3 pause
-			snapshot_delete $2 $3 $4
-			controlvm $2 $3 resume
-		#fi
+		read -p "All machines from this folder will be powered off. Are you sure[N/y]? " -n 1 -r
+		echo    # (optional) move to a new line
+		if [[ $REPLY =~ ^[Yy]$ ]]
+		then
+			controlvm $2 $3 poweroff
+			for snapshot_name in ${@:4}
+			do
+				snapshot_delete $2 $3 $snapshot_name
+			done
+		fi
 		
 	else
 		echo "Invalid arg vm numbers: expected [0-9] [0-9] <snapshot_name>, but was " $2 $3 $4
