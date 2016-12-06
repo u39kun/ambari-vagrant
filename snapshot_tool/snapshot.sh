@@ -240,7 +240,7 @@ sync_time()
 if is_windows; then
 	echo
 	echo "============================================================"
-	echo "Time sync is not avaliable on Windows hosts. "
+	echo "Time sync is not available on Windows hosts. "
 	echo "PLEASE DO IT BY YOURSELF"
 	echo "============================================================"
 else
