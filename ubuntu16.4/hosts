@@ -1,0 +1,12 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.168.16.101 u1601.ambari.apache.org u1601
+192.168.16.102 u1602.ambari.apache.org u1602
+192.168.16.103 u1603.ambari.apache.org u1603
+192.168.16.104 u1604.ambari.apache.org u1604
+192.168.16.105 u1605.ambari.apache.org u1605
+192.168.16.106 u1606.ambari.apache.org u1606
+192.168.16.107 u1607.ambari.apache.org u1607
+192.168.16.108 u1608.ambari.apache.org u1608
+192.168.16.109 u1609.ambari.apache.org u1609
+192.168.16.110 u1610.ambari.apache.org u1610

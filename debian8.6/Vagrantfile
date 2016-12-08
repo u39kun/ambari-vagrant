@@ -1,0 +1,68 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # All Vagrant configuration is done here. The most common configuration
+  # Every Vagrant virtual environment requires a box to build off of.
+  config.vm.box = "bento/debian-8.6"
+
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", 2048] # RAM allocated to each VM
+  end
+
+  config.vm.provision :shell, :path => "bootstrap.sh"
+
+  config.vm.define :d8601 do |d8601|
+    d8601.vm.hostname = "d8601.ambari.apache.org"
+    d8601.vm.network :private_network, ip: "192.168.86.101"
+  end
+
+  config.vm.define :d8602 do |d8602|
+    d8602.vm.hostname = "d8602.ambari.apache.org"
+    d8602.vm.network :private_network, ip: "192.168.86.102"
+  end
+
+  config.vm.define :d8603 do |d8603|
+    d8603.vm.hostname = "d8603.ambari.apache.org"
+    d8603.vm.network :private_network, ip: "192.168.86.103"
+  end
+
+  config.vm.define :d8604 do |d8604|
+    d8604.vm.hostname = "d8604.ambari.apache.org"
+    d8604.vm.network :private_network, ip: "192.168.86.104"
+  end
+
+  config.vm.define :d8605 do |d8605|
+    d8605.vm.hostname = "d8605.ambari.apache.org"
+    d8605.vm.network :private_network, ip: "192.168.86.105"
+  end
+
+  config.vm.define :d8606 do |d8606|
+    d8606.vm.hostname = "d8606.ambari.apache.org"
+    d8606.vm.network :private_network, ip: "192.168.86.106"
+  end
+
+  config.vm.define :d8607 do |d8607|
+    d8607.vm.hostname = "d8607.ambari.apache.org"
+    d8607.vm.network :private_network, ip: "192.168.86.107"
+  end
+
+  config.vm.define :d8608 do |d8608|
+    d8608.vm.hostname = "d8608.ambari.apache.org"
+    d8608.vm.network :private_network, ip: "192.168.86.108"
+  end
+
+  config.vm.define :d8609 do |d8609|
+    d8609.vm.hostname = "d8609.ambari.apache.org"
+    d8609.vm.network :private_network, ip: "192.168.86.109"
+  end
+
+  config.vm.define :d8610 do |d8610|
+    d8610.vm.hostname = "d8610.ambari.apache.org"
+    d8610.vm.network :private_network, ip: "192.168.86.110"
+  end
+
+end

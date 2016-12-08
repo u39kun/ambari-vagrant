@@ -75,6 +75,17 @@
 192.168.14.108 u1408.ambari.apache.org u1408
 192.168.14.109 u1409.ambari.apache.org u1409
 192.168.14.110 u1410.ambari.apache.org u1410
+# ubuntu 16.4 hosts
+192.168.16.101 u1601.ambari.apache.org u1601
+192.168.16.102 u1602.ambari.apache.org u1602
+192.168.16.103 u1603.ambari.apache.org u1603
+192.168.16.104 u1604.ambari.apache.org u1604
+192.168.16.105 u1605.ambari.apache.org u1605
+192.168.16.106 u1606.ambari.apache.org u1606
+192.168.16.107 u1607.ambari.apache.org u1607
+192.168.16.108 u1608.ambari.apache.org u1608
+192.168.16.109 u1609.ambari.apache.org u1609
+192.168.16.110 u1610.ambari.apache.org u1610
 # debian 7.6 hosts
 192.168.76.101 d7601.ambari.apache.org d7601
 192.168.76.102 d7602.ambari.apache.org d7602
@@ -86,6 +97,17 @@
 192.168.76.108 d7608.ambari.apache.org d7608
 192.168.76.109 d7609.ambari.apache.org d7609
 192.168.76.110 d7610.ambari.apache.org d7610
+# debian 8.6 hosts
+192.168.86.101 d8601.ambari.apache.org d8601
+192.168.86.102 d8602.ambari.apache.org d8602
+192.168.86.103 d8603.ambari.apache.org d8603
+192.168.86.104 d8604.ambari.apache.org d8604
+192.168.86.105 d8605.ambari.apache.org d8605
+192.168.86.106 d8606.ambari.apache.org d8606
+192.168.86.107 d8607.ambari.apache.org d8607
+192.168.86.108 d8608.ambari.apache.org d8608
+192.168.86.109 d8609.ambari.apache.org d8609
+192.168.86.110 d8610.ambari.apache.org d8610
 # centos 7.0
 192.168.70.101 c7001.ambari.apache.org c7001
 192.168.70.102 c7002.ambari.apache.org c7002
