@@ -1,0 +1,73 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # All Vagrant configuration is done here. The most common configuration
+  # Every Vagrant virtual environment requires a box to build off of.
+  config.vm.box = "bento/ubuntu-16.04"
+
+  # Fixes changes from https://github.com/mitchellh/vagrant/pull/4707
+  config.ssh.insert_key = false
+
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", 2048] # RAM allocated to each VM
+  end
+
+  config.vm.provision :shell, :path => "bootstrap.sh"
+
+  config.vm.define :u1601 do |u1601|
+    # uncomment the line below to set up the ambari dev environment
+    # u1601.vm.provision :shell, :path => "dev-bootstrap.sh"
+    u1601.vm.hostname = "u1601.ambari.apache.org"
+    u1601.vm.network :private_network, ip: "192.168.16.101"
+  end
+
+  config.vm.define :u1602 do |u1602|
+    u1602.vm.hostname = "u1602.ambari.apache.org"
+    u1602.vm.network :private_network, ip: "192.168.16.102"
+  end
+
+  config.vm.define :u1603 do |u1603|
+    u1603.vm.hostname = "u1603.ambari.apache.org"
+    u1603.vm.network :private_network, ip: "192.168.16.103"
+  end
+
+  config.vm.define :u1604 do |u1604|
+    u1604.vm.hostname = "u1604.ambari.apache.org"
+    u1604.vm.network :private_network, ip: "192.168.16.104"
+  end
+
+  config.vm.define :u1605 do |u1605|
+    u1605.vm.hostname = "u1605.ambari.apache.org"
+    u1605.vm.network :private_network, ip: "192.168.16.105"
+  end
+
+  config.vm.define :u1606 do |u1606|
+    u1606.vm.hostname = "u1606.ambari.apache.org"
+    u1606.vm.network :private_network, ip: "192.168.16.106"
+  end
+
+  config.vm.define :u1607 do |u1607|
+    u1607.vm.hostname = "u1607.ambari.apache.org"
+    u1607.vm.network :private_network, ip: "192.168.16.107"
+  end
+
+  config.vm.define :u1608 do |u1608|
+    u1608.vm.hostname = "u1608.ambari.apache.org"
+    u1608.vm.network :private_network, ip: "192.168.16.108"
+  end
+
+  config.vm.define :u1609 do |u1609|
+    u1609.vm.hostname = "u1609.ambari.apache.org"
+    u1609.vm.network :private_network, ip: "192.168.16.109"
+  end
+
+  config.vm.define :u1610 do |u1610|
+    u1610.vm.hostname = "u1610.ambari.apache.org"
+    u1610.vm.network :private_network, ip: "192.168.16.110"
+  end
+
+end
