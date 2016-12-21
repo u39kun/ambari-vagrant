@@ -258,7 +258,7 @@ else
 		vm=$(vm_name $vm_prefix$i)
 		if [ $vm != "NONE" ]; then
 			echo "Syncing time on VM $vm_prefix$i"
-			ssh -i ../insecure_private_key root@$vm_prefix$i  'sudo service ntpd stop && sudo ntpdate -s time.nist.gov && sudo service ntpd start'
+			ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ../insecure_private_key root@$vm_prefix$i  'sudo service ntpd stop && sudo ntpdate -s time.nist.gov && sudo service ntpd start'
 		else
 			echo "VM $vm_prefix$i doesn't exist"
 			exit -1;
@@ -267,7 +267,7 @@ else
 	echo "Time on VM's is:"
 	for i in $(seq -f '%02g' $1 $2);
 	do
-			ssh -i ../insecure_private_key root@$vm_prefix$i  'date'
+			ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ../insecure_private_key root@$vm_prefix$i  'date'
 	done	
 fi
 
