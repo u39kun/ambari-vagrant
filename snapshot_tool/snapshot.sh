@@ -15,6 +15,9 @@ set_vm_prefix(){
 	centos7.0)
 		vm_prefix=c70
 	;;
+	centos6.8)
+		vm_prefix=c68
+	;;
 	centos6.6)
 		vm_prefix=c66
 	;;
