@@ -12,8 +12,14 @@
 set_vm_prefix(){
 	current_dir=$(basename "$PWD")
 	case $current_dir in
+	centos7.3)
+		vm_prefix=c73
+	;;
 	centos7.0)
 		vm_prefix=c70
+	;;
+	centos6.8)
+		vm_prefix=c68
 	;;
 	centos6.6)
 		vm_prefix=c66
