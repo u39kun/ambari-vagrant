@@ -1,0 +1,190 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # All Vagrant configuration is done here. The most common configuration
+  # Every Vagrant virtual environment requires a box to build off of.
+  config.vm.box = "bento/centos-7.2"
+
+  # Fixes changes from https://github.com/mitchellh/vagrant/pull/4707
+  config.ssh.insert_key = false
+
+  # The url from where the 'config.vm.box' box will be fetched if it
+  # doesn't already exist on the user's system.
+
+  # CentOS 7.2 x86_64
+  config.vm.box_url = "https://atlas.hashicorp.com/bento/boxes/centos-7.2/versions/2.3.1/providers/virtualbox.box"
+
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", 3072] # RAM allocated to each VM
+  end
+
+  config.vm.provision :shell, :path => "bootstrap.sh"
+
+  config.vm.define :c7201 do |c7201|
+    # uncomment the line below to set up the ambari dev environment
+    # c7201.vm.provision :shell, :path => "dev-bootstrap.sh"
+    c7201.vm.hostname = "c7201.ambari.apache.org"
+    c7201.vm.network :private_network, ip: "192.168.72.101"
+  end
+
+  config.vm.define :c7202 do |c7202|
+    c7202.vm.hostname = "c7202.ambari.apache.org"
+    c7202.vm.network :private_network, ip: "192.168.72.102"
+  end
+
+  config.vm.define :c7203 do |c7203|
+    c7203.vm.hostname = "c7203.ambari.apache.org"
+    c7203.vm.network :private_network, ip: "192.168.72.103"
+  end
+
+  config.vm.define :c7204 do |c7204|
+    c7204.vm.hostname = "c7204.ambari.apache.org"
+    c7204.vm.network :private_network, ip: "192.168.72.104"
+  end
+
+  config.vm.define :c7205 do |c7205|
+    c7205.vm.hostname = "c7205.ambari.apache.org"
+    c7205.vm.network :private_network, ip: "192.168.72.105"
+  end
+
+  config.vm.define :c7206 do |c7206|
+    c7206.vm.hostname = "c7206.ambari.apache.org"
+    c7206.vm.network :private_network, ip: "192.168.72.106"
+  end
+
+  config.vm.define :c7207 do |c7207|
+    c7207.vm.hostname = "c7207.ambari.apache.org"
+    c7207.vm.network :private_network, ip: "192.168.72.107"
+  end
+
+  config.vm.define :c7208 do |c7208|
+    c7208.vm.hostname = "c7208.ambari.apache.org"
+    c7208.vm.network :private_network, ip: "192.168.72.108"
+  end
+
+  config.vm.define :c7209 do |c7209|
+    c7209.vm.hostname = "c7209.ambari.apache.org"
+    c7209.vm.network :private_network, ip: "192.168.72.109"
+  end
+
+  config.vm.define :c7210 do |c7210|
+    c7210.vm.hostname = "c7210.ambari.apache.org"
+    c7210.vm.network :private_network, ip: "192.168.72.110"
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # config.vm.network :forwarded_port, guest: 80, host: 8080
+
+  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+  # config.vm.network :private_network, ip: "192.168.33.10"
+
+  # Create a public network, which generally matched to bridged network.
+  # Bridged networks make the machine appear as another physical device on
+  # your network.
+  # config.vm.network :public_network
+
+  # If true, then any SSH connections made will enable agent forwarding.
+  # Default value: false
+  # config.ssh.forward_agent = true
+
+  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  # Provider-specific configuration so you can fine-tune various
+  # backing providers for Vagrant. These expose provider-specific options.
+  # Example for VirtualBox:
+  #
+  # config.vm.provider :virtualbox do |vb|
+  #   # Don't boot with headless mode
+  #   vb.gui = true
+  #
+  #   # Use VBoxManage to customize the VM. For example to change memory:
+  #   vb.customize ["modifyvm", :id, "--memory", "1024"]
+  # end
+  #
+  # View the documentation for the provider you're using for more
+  # information on available options.
+
+  # Enable provisioning with Puppet stand alone.  Puppet manifests
+  # are contained in a directory path relative to this Vagrantfile.
+  # You will need to create the manifests directory and a manifest in
+  # the file precise32.pp in the manifests_path directory.
+  #
+  # An example Puppet manifest to provision the message of the day:
+  #
+  # # group { "puppet":
+  # #   ensure => "present",
+  # # }
+  # #
+  # # File { owner => 0, group => 0, mode => 0644 }
+  # #
+  # # file { '/etc/motd':
+  # #   content => "Welcome to your Vagrant-built virtual machine!
+  # #               Managed by Puppet.\n"
+  # # }
+  #
+  # config.vm.provision :puppet do |puppet|
+  #   puppet.manifests_path = "manifests"
+  #   puppet.manifest_file  = "init.pp"
+  # end
+
+  # Enable provisioning with chef solo, specifying a cookbooks path, roles
+  # path, and data_bags path (all relative to this Vagrantfile), and adding
+  # some recipes and/or roles.
+  #
+  # config.vm.provision :chef_solo do |chef|
+  #   chef.cookbooks_path = "../my-recipes/cookbooks"
+  #   chef.roles_path = "../my-recipes/roles"
+  #   chef.data_bags_path = "../my-recipes/data_bags"
+  #   chef.add_recipe "mysql"
+  #   chef.add_role "web"
+  #
+  #   # You may also specify custom JSON attributes:
+  #   chef.json = { :mysql_password => "foo" }
+  # end
+
+  # Enable provisioning with chef server, specifying the chef server URL,
+  # and the path to the validation key (relative to this Vagrantfile).
+  #
+  # The Opscode Platform uses HTTPS. Substitute your organization for
+  # ORGNAME in the URL and validation key.
+  #
+  # If you have your own Chef Server, use the appropriate URL, which may be
+  # HTTP instead of HTTPS depending on your configuration. Also change the
+  # validation key to validation.pem.
+  #
+  # config.vm.provision :chef_client do |chef|
+  #   chef.chef_server_url = "https://api.opscode.com/organizations/ORGNAME"
+  #   chef.validation_key_path = "ORGNAME-validator.pem"
+  # end
+  #
+  # If you're using the Opscode platform, your validator client is
+  # ORGNAME-validator, replacing ORGNAME with your organization name.
+  #
+  # If you have your own Chef Server, the default validation client name is
+  # chef-validator, unless you changed the configuration.
+  #
+  #   chef.validation_client_name = "ORGNAME-validator"
+end
