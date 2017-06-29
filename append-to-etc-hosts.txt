@@ -42,6 +42,17 @@
 192.168.65.108 c6508.ambari.apache.org c6508
 192.168.65.109 c6509.ambari.apache.org c6509
 192.168.65.110 c6510.ambari.apache.org c6510
+# centos 6.8 hosts
+192.168.68.101 c6801.ambari.apache.org c6801
+192.168.68.102 c6802.ambari.apache.org c6802
+192.168.68.103 c6803.ambari.apache.org c6803
+192.168.68.104 c6804.ambari.apache.org c6804
+192.168.68.105 c6805.ambari.apache.org c6805
+192.168.68.106 c6806.ambari.apache.org c6806
+192.168.68.107 c6807.ambari.apache.org c6807
+192.168.68.108 c6808.ambari.apache.org c6808
+192.168.68.109 c6809.ambari.apache.org c6809
+192.168.68.110 c6810.ambari.apache.org c6810
 # suse 11 hosts
 192.168.11.101 suse1101.ambari.apache.org suse1101
 192.168.11.102 suse1102.ambari.apache.org suse1102
@@ -119,5 +130,27 @@
 192.168.70.108 c7008.ambari.apache.org c7008
 192.168.70.109 c7009.ambari.apache.org c7009
 192.168.70.110 c7010.ambari.apache.org c7010
+# centos 7.2
+192.168.72.101 c7201.ambari.apache.org c7201
+192.168.72.102 c7202.ambari.apache.org c7202
+192.168.72.103 c7203.ambari.apache.org c7203
+192.168.72.104 c7204.ambari.apache.org c7204
+192.168.72.105 c7205.ambari.apache.org c7205
+192.168.72.106 c7206.ambari.apache.org c7206
+192.168.72.107 c7207.ambari.apache.org c7207
+192.168.72.108 c7208.ambari.apache.org c7208
+192.168.72.109 c7209.ambari.apache.org c7209
+192.168.72.110 c7210.ambari.apache.org c7210
+# centos 7.3
+192.168.73.101 c7301.ambari.apache.org c7301
+192.168.73.102 c7302.ambari.apache.org c7302
+192.168.73.103 c7303.ambari.apache.org c7303
+192.168.73.104 c7304.ambari.apache.org c7304
+192.168.73.105 c7305.ambari.apache.org c7305
+192.168.73.106 c7306.ambari.apache.org c7306
+192.168.73.107 c7307.ambari.apache.org c7307
+192.168.73.108 c7308.ambari.apache.org c7308
+192.168.73.109 c7309.ambari.apache.org c7309
+192.168.73.110 c7310.ambari.apache.org c7310
 
 
