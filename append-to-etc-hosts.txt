@@ -97,6 +97,17 @@
 192.168.16.108 u1608.ambari.apache.org u1608
 192.168.16.109 u1609.ambari.apache.org u1609
 192.168.16.110 u1610.ambari.apache.org u1610
+# ubuntu 18.4 hosts
+192.168.18.101 u1801.ambari.apache.org u1801
+192.168.18.102 u1802.ambari.apache.org u1802
+192.168.18.103 u1803.ambari.apache.org u1803
+192.168.18.104 u1804.ambari.apache.org u1804
+192.168.18.105 u1805.ambari.apache.org u1805
+192.168.18.106 u1806.ambari.apache.org u1806
+192.168.18.107 u1807.ambari.apache.org u1807
+192.168.18.108 u1808.ambari.apache.org u1808
+192.168.18.109 u1809.ambari.apache.org u1809
+192.168.18.110 u1810.ambari.apache.org u1810
 # debian 7.6 hosts
 192.168.76.101 d7601.ambari.apache.org d7601
 192.168.76.102 d7602.ambari.apache.org d7602
