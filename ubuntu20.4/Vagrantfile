@@ -1,0 +1,73 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # All Vagrant configuration is done here. The most common configuration
+  # Every Vagrant virtual environment requires a box to build off of.
+  config.vm.box = "bento/ubuntu-20.04"
+
+  # Fixes changes from https://github.com/mitchellh/vagrant/pull/4707
+  config.ssh.insert_key = false
+
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", 2048] # RAM allocated to each VM
+  end
+
+  config.vm.provision :shell, :path => "bootstrap.sh"
+
+  config.vm.define :u2001 do |u2001|
+    # uncomment the line below to set up the ambari dev environment
+    # u2001.vm.provision :shell, :path => "dev-bootstrap.sh"
+    u2001.vm.hostname = "u2001.ambari.apache.org"
+    u2001.vm.network :private_network, ip: "192.168.20.101"
+  end
+
+  config.vm.define :u2002 do |u2002|
+    u2002.vm.hostname = "u2002.ambari.apache.org"
+    u2002.vm.network :private_network, ip: "192.168.20.102"
+  end
+
+  config.vm.define :u2003 do |u2003|
+    u2003.vm.hostname = "u2003.ambari.apache.org"
+    u2003.vm.network :private_network, ip: "192.168.20.103"
+  end
+
+  config.vm.define :u2004 do |u2004|
+    u2004.vm.hostname = "u2004.ambari.apache.org"
+    u2004.vm.network :private_network, ip: "192.168.20.104"
+  end
+
+  config.vm.define :u2005 do |u2005|
+    u2005.vm.hostname = "u2005.ambari.apache.org"
+    u2005.vm.network :private_network, ip: "192.168.20.105"
+  end
+
+  config.vm.define :u2006 do |u2006|
+    u2006.vm.hostname = "u2006.ambari.apache.org"
+    u2006.vm.network :private_network, ip: "192.168.20.106"
+  end
+
+  config.vm.define :u2007 do |u2007|
+    u2007.vm.hostname = "u2007.ambari.apache.org"
+    u2007.vm.network :private_network, ip: "192.168.20.107"
+  end
+
+  config.vm.define :u2008 do |u2008|
+    u2008.vm.hostname = "u2008.ambari.apache.org"
+    u2008.vm.network :private_network, ip: "192.168.20.108"
+  end
+
+  config.vm.define :u2009 do |u2009|
+    u2009.vm.hostname = "u2009.ambari.apache.org"
+    u2009.vm.network :private_network, ip: "192.168.20.109"
+  end
+
+  config.vm.define :u2010 do |u2010|
+    u2010.vm.hostname = "u2010.ambari.apache.org"
+    u2010.vm.network :private_network, ip: "192.168.20.110"
+  end
+
+end
