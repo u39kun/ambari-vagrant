@@ -51,6 +51,9 @@ set_vm_prefix(){
 	ubuntu16.4)
 		vm_prefix=u16
 	;;
+	ubuntu18.4)
+		vm_prefix=u18
+	;;
 	debian7.6)
 		vm_prefix=d76
 	;;

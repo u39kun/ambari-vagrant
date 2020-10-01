@@ -22,52 +22,52 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # uncomment the line below to set up the ambari dev environment
     # u1801.vm.provision :shell, :path => "dev-bootstrap.sh"
     u1801.vm.hostname = "u1801.ambari.apache.org"
-    u1801.vm.network :private_network, ip: "192.188.18.101"
+    u1801.vm.network :private_network, ip: "192.168.18.101"
   end
 
   config.vm.define :u1802 do |u1802|
     u1802.vm.hostname = "u1802.ambari.apache.org"
-    u1802.vm.network :private_network, ip: "192.188.18.102"
+    u1802.vm.network :private_network, ip: "192.168.18.102"
   end
 
   config.vm.define :u1803 do |u1803|
     u1803.vm.hostname = "u1803.ambari.apache.org"
-    u1803.vm.network :private_network, ip: "192.188.18.103"
+    u1803.vm.network :private_network, ip: "192.168.18.103"
   end
 
   config.vm.define :u1804 do |u1804|
     u1804.vm.hostname = "u1804.ambari.apache.org"
-    u1804.vm.network :private_network, ip: "192.188.18.104"
+    u1804.vm.network :private_network, ip: "192.168.18.104"
   end
 
   config.vm.define :u1805 do |u1805|
     u1805.vm.hostname = "u1805.ambari.apache.org"
-    u1805.vm.network :private_network, ip: "192.188.18.105"
+    u1805.vm.network :private_network, ip: "192.168.18.105"
   end
 
   config.vm.define :u1806 do |u1806|
     u1806.vm.hostname = "u1806.ambari.apache.org"
-    u1806.vm.network :private_network, ip: "192.188.18.106"
+    u1806.vm.network :private_network, ip: "192.168.18.106"
   end
 
   config.vm.define :u1807 do |u1807|
     u1807.vm.hostname = "u1807.ambari.apache.org"
-    u1807.vm.network :private_network, ip: "192.188.18.107"
+    u1807.vm.network :private_network, ip: "192.168.18.107"
   end
 
   config.vm.define :u1808 do |u1808|
     u1808.vm.hostname = "u1808.ambari.apache.org"
-    u1808.vm.network :private_network, ip: "192.188.18.108"
+    u1808.vm.network :private_network, ip: "192.168.18.108"
   end
 
   config.vm.define :u1809 do |u1809|
     u1809.vm.hostname = "u1809.ambari.apache.org"
-    u1809.vm.network :private_network, ip: "192.188.18.109"
+    u1809.vm.network :private_network, ip: "192.168.18.109"
   end
 
   config.vm.define :u1810 do |u1810|
     u1810.vm.hostname = "u1810.ambari.apache.org"
-    u1810.vm.network :private_network, ip: "192.188.18.110"
+    u1810.vm.network :private_network, ip: "192.168.18.110"
   end
 
 end
